@@ -1,0 +1,42 @@
+.block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 3rem;
+    position: relative;
+
+}
+
+.input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #B4B4B4;
+    background-color: transparent;
+    outline: none;
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: inherit;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.label {
+    margin-bottom: 1.6rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.9rem;
+    position: absolute;
+    left: 1rem;
+    bottom: 0;
+    transform: translateY(30%);
+    transition: transform .4s;
+    z-index: -1;
+}
+
+.input:focus~.label {
+    transform: translateY(-100%);
+}
+
+.input:valid~.label {
+    transform: translateY(-100%);
+}

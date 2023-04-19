@@ -1,0 +1,38 @@
+.block {
+    padding-bottom: 14rem;
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 9rem;
+        margin-top: 4rem;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 5rem;
+        line-height: 8rem;
+        width: 50%;
+    }
+
+    &__filter {
+        font-size: 2rem;
+        margin-bottom: 1.6rem;
+        line-height: 3rem;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2.5rem;
+        row-gap: 7rem;
+        margin-bottom: 14rem;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

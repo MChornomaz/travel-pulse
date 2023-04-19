@@ -1,0 +1,149 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 6%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    &__logo {
+        height: 97px;
+
+        &--img {
+            height: 100%;
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 35%;
+
+        & a {
+            font-weight: 800;
+            font-size: 2.4rem;
+            line-height: 2.9rem;
+            text-decoration: none;
+            color: #ffffff;
+            border-bottom: 3px solid transparent;
+            transition: all .4s;
+
+
+
+            &:hover {
+                border-bottom: 3px solid #ffffff;
+                transform: translateY(-5px);
+            }
+
+            &:active {
+
+                transform: scale(0.98)
+            }
+
+
+        }
+    }
+
+    &__user-links {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__icon {
+        cursor: pointer;
+        will-change: transform;
+        transition: transform .5s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        &:active {
+            transform: scale(1);
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 35rem;
+    }
+
+    &__signup {
+        font-weight: 800;
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+        text-decoration: none;
+        color: #ffffff;
+        border-bottom: 3px solid transparent;
+        transition: all .4s;
+        cursor: pointer;
+
+        &:hover {
+            border-bottom: 3px solid #ffffff;
+            transform: translateY(-5px);
+        }
+
+        &:active {
+
+            transform: scale(0.98)
+        }
+    }
+
+
+
+    &__search-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__search {
+        height: 3rem;
+        border: none;
+        outline: none;
+        border-radius: 15px;
+        padding-left: 10px;
+        font-size: 1.7rem;
+        font-family: inherit;
+        width: 0;
+        height: 0;
+        will-change: width, height;
+        transition: width, height .9s ease-out;
+
+    }
+
+}
+
+.inverted__link {
+    color: #5B5B5B !important;
+}
+
+.inverted__signup {
+    font-weight: 800;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    text-decoration: none;
+    color: #4169E1;
+    border-bottom: 3px solid transparent;
+    transition: all .4s;
+    cursor: pointer;
+
+    &:hover {
+        border-bottom: 3px solid #4169E1;
+        transform: translateY(-5px);
+    }
+
+    &:active {
+
+        transform: scale(0.98)
+    }
+}

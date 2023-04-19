@@ -1,0 +1,22 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-color: #4169E1;
+    cursor: pointer;
+
+
+    &:hover {
+        background-color: #7f9cf3;
+    }
+
+    &[disabled] {
+        background-color: #CDCCCC;
+    }
+
+
+}

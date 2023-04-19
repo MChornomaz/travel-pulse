@@ -1,0 +1,34 @@
+.info {
+    margin-bottom: 14rem;
+
+
+    &__description {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 9rem;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 4.2rem;
+        line-height: 5rem;
+    }
+
+    &__subtitle {
+        font-size: 2.2rem;
+        line-height: 2.3rem;
+        margin-top: 1.5rem;
+        color: #404040;
+    }
+
+    &__container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2.5rem;
+        row-gap: 8rem;
+    }
+
+
+}

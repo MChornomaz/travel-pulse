@@ -1,0 +1,67 @@
+.card {
+    height: 100%;
+    width: 33.33%;
+    background-size: cover;
+    position: relative;
+    transition: all .5s;
+
+
+    &:hover {
+        background-position: center;
+
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .5);
+        z-index: 2;
+    }
+
+    &:hover.card::after {
+        background: rgba(0, 0, 0, .2);
+    }
+
+    &:hover h3 {
+        text-decoration-color: rgb(255, 255, 255);
+        -webkit-text-decoration-color: red;
+        -moz-text-decoration-color: rgb(255, 255, 255);
+    }
+
+    &__text {
+        position: absolute;
+        width: 80%;
+        bottom: 5%;
+        left: 10%;
+        z-index: 3;
+        filter: blur(0) !important;
+    }
+
+    &__link {
+        display: flex;
+        align-items: end;
+        font-weight: 600;
+        font-size: 1.7vw;
+        line-height: 2.5vw;
+        text-decoration: none;
+        color: #FFFFFF;
+
+
+
+
+        & h3 {
+            width: 75%;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            transition: .7s;
+            -webkit-text-decoration-color: transparent;
+            -moz-text-decoration-color: transparent;
+        }
+
+
+    }
+}

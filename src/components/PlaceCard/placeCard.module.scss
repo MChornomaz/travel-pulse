@@ -1,0 +1,56 @@
+.info {
+    &__card {
+        width: 100%;
+        text-decoration: none;
+        color: #000000;
+
+
+
+    }
+
+    &__image {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 4rem;
+
+
+        & img {
+            width: 100%;
+            transition: transform 3s ease-in;
+        }
+    }
+
+    &__name {
+        display: inline-block;
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 3rem;
+        margin-top: 2rem;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom .4s;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 0%;
+            height: 3px;
+            background: rgba(0, 0, 0, 1);
+            z-index: 2;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            transition: all .4s ease-out;
+        }
+
+
+    }
+
+    &__card:hover .info__name::after {
+        width: 100%;
+        height: 3px;
+    }
+
+    &__card:hover .info__image img {
+        transform: scale(1.4);
+    }
+}
