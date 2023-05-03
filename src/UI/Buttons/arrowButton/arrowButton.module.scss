@@ -10,8 +10,10 @@
     cursor: pointer;
 
 
-    &:hover {
-        background-color: #7f9cf3;
+    @media (min-width: 1200px) {
+        &:hover {
+            background-color: #7f9cf3;
+        }
     }
 
     &[disabled] {

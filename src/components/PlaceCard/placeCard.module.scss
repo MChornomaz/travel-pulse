@@ -40,12 +40,15 @@
         }
     }
 
-    &__card:hover .info__name::after {
-        width: 100%;
-        height: 3px;
+    @media (min-width: 1200px) {
+        &__card:hover .info__name::after {
+            width: 100%;
+            height: 3px;
+        }
+
+        &__card:hover .info__image img {
+            transform: scale(1.4);
+        }
     }
 
-    &__card:hover .info__image img {
-        transform: scale(1.4);
-    }
 }

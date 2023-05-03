@@ -32,13 +32,17 @@ const Button = styled.button<FormButtonProps>`
         transition: all 0.4s;
     }
 
-    &:hover::before {
-        width: 100%;
-        left: 0;
+    @media (min-width: 1200px) {
+        &:hover::before {
+            width: 100%;
+            left: 0;
+        }
     }
 
-    &:hover {
-        color: #ffffff;
+    @media (min-width: 1200px) {
+        &:hover {
+            color: #ffffff;
+        }
     }
 
     &:active {
@@ -56,12 +60,16 @@ const Button = styled.button<FormButtonProps>`
                 background-color: #ffffff;
             }
 
-            &:hover::before {
-                background-color: #4169e1;
+            @media (min-width: 1200px) {
+                &:hover::before {
+                    background-color: #4169e1;
+                }
             }
 
-            &:hover {
-                color: #000000;
+            @media (min-width: 1200px) {
+                &:hover {
+                    color: #000000;
+                }
             }
         `}
 

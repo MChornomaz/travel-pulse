@@ -64,7 +64,9 @@
         background-color: #4169E1;
     }
 
-    &:hover {
-        background-color: #4169e11e;
+    @media (min-width: 1200px) {
+        &:hover {
+            background-color: #4169e11e;
+        }
     }
 }

@@ -128,9 +128,13 @@
             transition: width .4s ease-in-out;
         }
 
-        &:hover.card__link::after {
-            width: 100%;
+        @media (min-width: 1200px) {
+
+            &:hover.card__link::after {
+                width: 100%;
+            }
         }
+
     }
 }
 
@@ -158,13 +162,16 @@
         justify-content: center;
         transition: transform .2s ease-in-out;
 
-        &:hover {
-            transform: scale(1.4);
+        @media (min-width: 1200px) {
+            &:hover {
+                transform: scale(1.4);
+            }
+
+            &:active {
+                transform: scale(1.1);
+            }
         }
 
-        &:active {
-            transform: scale(1.1);
-        }
     }
 
     &__button {
@@ -176,9 +183,12 @@
         cursor: pointer;
         transition: all .3s;
 
-        &:hover {
-            transform: scale(1.2);
+        @media (min-width: 1200px) {
+            &:hover {
+                transform: scale(1.2);
+            }
         }
+
 
         &:active {
             transform: scale(1);

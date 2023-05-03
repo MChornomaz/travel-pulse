@@ -60,9 +60,12 @@
             transition: width .3s ease-in;
         }
 
-        &:hover.card__heading::after {
-            width: 100%;
+        @media (min-width: 1200px) {
+            &:hover.card__heading::after {
+                width: 100%;
+            }
         }
+
     }
 
     &__description {

@@ -15,10 +15,12 @@
         height: 100vh;
     }
 
-    &:hover {
-        background-position: center;
-
+    @media (min-width: 1200px) {
+        &:hover {
+            background-position: center;
+        }
     }
+
 
     &:after {
         content: '';
@@ -31,19 +33,20 @@
         z-index: 2;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1200px) {
         &:hover.card::after {
             background: rgba(0, 0, 0, .2);
+        }
+
+        &:hover h3 {
+            text-decoration-color: rgb(255, 255, 255);
+            -webkit-text-decoration-color: red;
+            -moz-text-decoration-color: rgb(255, 255, 255);
         }
     }
 
 
 
-    &:hover h3 {
-        text-decoration-color: rgb(255, 255, 255);
-        -webkit-text-decoration-color: red;
-        -moz-text-decoration-color: rgb(255, 255, 255);
-    }
 
     &__text {
         position: absolute;

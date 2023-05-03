@@ -115,9 +115,13 @@
         justify-content: center;
         transition: transform .2s ease-in-out;
 
-        &:hover {
-            transform: scale(1.4);
+        @media (min-width: 1200px) {
+            &:hover {
+                transform: scale(1.4);
+            }
+
         }
+
 
         &:active {
             transform: scale(1.1);
@@ -137,9 +141,13 @@
             margin: 0 8px;
         }
 
-        &:hover {
-            transform: scale(1.2);
+        @media (min-width: 1200px) {
+
+            &:hover {
+                transform: scale(1.2);
+            }
         }
+
 
         &:active {
             transform: scale(1);

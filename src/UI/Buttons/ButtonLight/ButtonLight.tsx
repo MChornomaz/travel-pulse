@@ -33,13 +33,17 @@ const StyledButtonLight = styled.button`
         transition: all 0.3s;
     }
 
-    &:hover::before {
-        width: 100%;
-        left: 0;
+    @media (min-width: 1200px) {
+        &:hover::before {
+            width: 100%;
+            left: 0;
+        }
     }
 
-    &:hover {
-        color: #ffffff;
+    @media (min-width: 1200px) {
+        &:hover {
+            color: #ffffff;
+        }
     }
 
     &:active {

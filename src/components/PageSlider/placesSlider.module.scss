@@ -96,9 +96,12 @@
         }
     }
 
-    &__card:hover .slider__image img {
-        transform: scale(1.4);
+    @media (min-width: 1200px) {
+        &__card:hover .slider__image img {
+            transform: scale(1.4);
+        }
     }
+
 
     &__location {
         font-size: 2.2rem;
