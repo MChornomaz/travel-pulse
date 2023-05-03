@@ -12,17 +12,21 @@
         height: 95vh;
     }
 
-    &:hover div {
-        filter: blur(5px);
+    @media (min-width: 1024px) {
+        &:hover div {
+            filter: blur(5px);
+        }
+
+        & div:hover {
+            filter: blur(0px)
+        }
+
+        h2:hover .main-screen div {
+            filter: blur(0px)
+        }
     }
 
-    & div:hover {
-        filter: blur(0px)
-    }
 
-    h2:hover .main-screen div {
-        filter: blur(0px)
-    }
 
     &__heading {
         font-weight: 800;

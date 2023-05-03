@@ -31,9 +31,13 @@
         z-index: 2;
     }
 
-    &:hover.card::after {
-        background: rgba(0, 0, 0, .2);
+    @media (min-width: 1024px) {
+        &:hover.card::after {
+            background: rgba(0, 0, 0, .2);
+        }
     }
+
+
 
     &:hover h3 {
         text-decoration-color: rgb(255, 255, 255);
