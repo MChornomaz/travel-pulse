@@ -38,4 +38,8 @@
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 5;
+
+    @media (max-width: 500px) {
+        right: 10px;
+    }
 }
