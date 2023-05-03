@@ -14,11 +14,12 @@ type SelectProps = {
     placeholder: string;
     options: SelectItem[];
     onSelect: (value: string) => void;
+    onLoad?: string;
     testid?: string;
 };
 
 const FormSelect = (props: SelectProps) => {
-    const { onSelect, options, placeholder, testid } = props;
+    const { onSelect, options, placeholder, testid, onLoad } = props;
     const [selectedValue, setSelectedValue] = useState('');
     const [clicked, setClicked] = useState(true);
 
@@ -33,6 +34,13 @@ const FormSelect = (props: SelectProps) => {
         setSelectedValue(name);
         dropdownClickHandler();
     }, []);
+
+    useEffect(() => {
+        if (onLoad) {
+            onSelect(onLoad);
+            setSelectedValue(onLoad);
+        }
+    }, [onLoad]);
 
     const onSelectDefaultHandler = useCallback(() => {
         setSelectedValue('');

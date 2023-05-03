@@ -1,0 +1,18 @@
+.content {
+    height: calc(100vh - 30rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(128, 128, 128, 0.281);
+
+    @media (max-width: 900px) {
+        height: calc(100vh - 15rem);
+    }
+
+    @media (max-height: 550px) {
+        height: calc(100vh - 15rem);
+    }
+}

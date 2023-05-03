@@ -1,7 +1,6 @@
 .container {
     width: 100%;
     min-width: 25rem;
-
     position: relative;
     z-index: 1;
 
@@ -27,14 +26,10 @@
     transform: translateY(10);
     transition: transform .5s;
 
-
-
     &.clicked {
         transform: rotate(180deg) translateY(-15%);
     }
 }
-
-
 
 .dropdown {
     list-style: none;

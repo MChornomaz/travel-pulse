@@ -5,10 +5,13 @@
     align-items: center;
     justify-content: center;
 
-
     &__wrapper {
         width: 80%;
         margin-top: 5rem;
+
+        @media(max-height: 450px) {
+            margin-top: 10%;
+        }
     }
 
     &__header {
@@ -17,12 +20,17 @@
         line-height: 8vw;
         text-align: center;
         color: #000000;
-        margin-bottom: 10rem;
+        margin-bottom: 5vh;
     }
 
     &__search-block {
         width: 60%;
         margin: 0 auto;
+
+        @media (max-width: 768px) {
+            width: 100%;
+
+        }
     }
 }
 
@@ -30,12 +38,32 @@
     margin-top: 4rem;
     padding-bottom: 25rem;
 
+    @media (max-width: 900px) {
+        padding-bottom: 10rem;
+        margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        padding-bottom: 10rem;
+        margin-top: 2rem;
+    }
 
     &__info {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 10rem;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__text {
+        @media (max-width: 768px) {
+            margin-bottom: 3rem;
+        }
     }
 
     &__title {

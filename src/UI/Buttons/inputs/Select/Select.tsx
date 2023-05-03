@@ -14,11 +14,12 @@ type SelectProps = {
     placeholder: string;
     options: SelectItem[];
     onSelect: (value: string) => void;
+    onChange?: (val: boolean) => void;
     testid?: string;
 };
 
 const Select = (props: SelectProps) => {
-    const { onSelect, options, placeholder, testid } = props;
+    const { onSelect, options, placeholder, testid, onChange } = props;
     const [selectedValue, setSelectedValue] = useState('');
     const [clicked, setClicked] = useState(true);
 
@@ -26,22 +27,35 @@ const Select = (props: SelectProps) => {
 
     const dropdownClickHandler = useCallback(() => {
         setClicked((prev) => !prev);
+        if (onChange) {
+            onChange(false);
+        }
     }, []);
 
     const onSelectHandler = useCallback((value: string, name: string) => {
         onSelect(value);
         setSelectedValue(name);
         dropdownClickHandler();
+        if (onChange) {
+            onChange(true);
+        }
     }, []);
 
     const onSelectDefaultHandler = useCallback(() => {
         setSelectedValue('');
-        dropdownClickHandler();
+        onSelectHandler('', '');
+        setClicked(true);
+        if (onChange) {
+            onChange(true);
+        }
     }, []);
 
     const handleClickOutside = useCallback((e: MouseEvent) => {
         if (!myRef.current.contains(e.target as Node)) {
             setClicked(true);
+            if (onChange) {
+                onChange(true);
+            }
         }
     }, []);
 

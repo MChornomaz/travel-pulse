@@ -1,12 +1,37 @@
 .info {
     margin-bottom: 14rem;
 
+    @media (max-width: 1024px) {
+        margin-bottom: 10rem;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 6rem;
+
+    }
+
 
     &__description {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 9rem;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            margin-bottom: 6rem;
+        }
+
+    }
+
+    &__text {
+        @media (max-width: 1024px) {
+            margin-bottom: 7rem;
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 3rem;
+        }
     }
 
     &__title {
@@ -28,7 +53,17 @@
         grid-template-columns: repeat(3, 1fr);
         column-gap: 2.5rem;
         row-gap: 8rem;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            row-gap: 5rem;
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            row-gap: 4rem;
+        }
     }
-
-
 }

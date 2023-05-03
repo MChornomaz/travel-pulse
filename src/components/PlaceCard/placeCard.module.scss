@@ -3,9 +3,6 @@
         width: 100%;
         text-decoration: none;
         color: #000000;
-
-
-
     }
 
     &__image {
@@ -41,8 +38,6 @@
             bottom: -3px;
             transition: all .4s ease-out;
         }
-
-
     }
 
     &__card:hover .info__name::after {

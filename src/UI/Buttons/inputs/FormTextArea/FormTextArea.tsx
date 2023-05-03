@@ -5,7 +5,7 @@ import { FormTextAreaProps } from '../../../../types/types';
 import styles from './formTextArea.module.scss';
 
 const FormTextArea = (props: FormTextAreaProps) => {
-    const { id, label, name, onChange, testId, children, value, placeholder } = props;
+    const { id, label, name, onChange, testId, children, value, placeholder, onBlur } = props;
     return (
         <div className={styles.block}>
             <label className={styles.label} htmlFor={id}>
@@ -19,6 +19,7 @@ const FormTextArea = (props: FormTextAreaProps) => {
                 onChange={onChange}
                 data-testid={testId}
                 value={value}
+                onBlur={onBlur}
             >
                 {children}
             </textarea>

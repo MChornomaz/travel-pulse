@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 1rem 6%;
+    padding: 1rem;
     background-color: transparent;
     position: absolute;
     top: 0;
@@ -10,11 +10,20 @@
     width: 100%;
     z-index: 10;
 
+    @media (max-width: 1024px) {
+        justify-content: stretch;
+    }
+
     &__logo {
         height: 97px;
 
         &--img {
             height: 100%;
+        }
+
+
+        @media (max-width: 900px) {
+            height: 65px;
         }
     }
 
@@ -26,14 +35,12 @@
 
         & a {
             font-weight: 800;
-            font-size: 2.4rem;
+            font-size: 2rem;
             line-height: 2.9rem;
             text-decoration: none;
             color: #ffffff;
             border-bottom: 3px solid transparent;
             transition: all .4s;
-
-
 
             &:hover {
                 border-bottom: 3px solid #ffffff;
@@ -41,16 +48,17 @@
             }
 
             &:active {
-
                 transform: scale(0.98)
             }
+        }
 
-
+        @media (max-width: 900px) {
+            display: none;
         }
     }
 
     &__user-links {
-        width: 40%;
+        width: 45%;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -75,11 +83,16 @@
         align-items: center;
         justify-content: space-between;
         width: 35rem;
+        margin-left: 3rem;
+
+        @media (max-width: 900px) {
+            display: none;
+        }
     }
 
     &__signup {
         font-weight: 800;
-        font-size: 2.4rem;
+        font-size: 2rem;
         line-height: 2.9rem;
         text-decoration: none;
         color: #ffffff;
@@ -93,8 +106,11 @@
         }
 
         &:active {
-
             transform: scale(0.98)
+        }
+
+        @media (max-width: 900px) {
+            display: none;
         }
     }
 
@@ -104,6 +120,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 50%;
+
+        @media (max-width: 900px) {
+            display: none;
+        }
     }
 
     &__search {
@@ -112,13 +133,19 @@
         outline: none;
         border-radius: 15px;
         padding-left: 10px;
+        margin-right: 1.5rem;
         font-size: 1.7rem;
         font-family: inherit;
-        width: 0;
-        height: 0;
+        width: 80%;
+        height: 3rem;
+        position: relative;
+        z-index: 5;
         will-change: width, height;
-        transition: width, height .9s ease-out;
+        transition: width .9s ease-out;
 
+        &.bordered {
+            border: 1px solid #000000;
+        }
     }
 
 }
@@ -145,5 +172,9 @@
     &:active {
 
         transform: scale(0.98)
+    }
+
+    @media (max-width: 900px) {
+        display: none;
     }
 }

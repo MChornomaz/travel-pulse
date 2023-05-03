@@ -33,4 +33,9 @@ code {
 
 .mt14{
   margin-top: 14rem;
+
+  
+  @media (max-width: 900px) {
+            margin-top: 8rem;
+        }
 }

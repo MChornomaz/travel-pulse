@@ -1,26 +1,65 @@
 .login {
     display: flex;
-    height: 100%;
+    height: max-content;
     min-height: 60vh;
+    max-height: 95vh;
+
+    @media (max-width: 900px) {
+        height: 95vh;
+
+        & p {
+            display: none;
+        }
+    }
+
+    @media (max-height: 650px) {
+        & p {
+            display: none;
+        }
+    }
 
     &__image {
         width: 50%;
         min-height: 100%;
         background-size: cover;
         background-position: center;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     &__form {
         margin-top: 3rem;
+
+        @media (max-width: 900px) {
+            height: 100%;
+            margin-top: 1rem;
+        }
+
+        @media (max-height: 650px) {
+            margin-top: 0;
+        }
     }
 
     &__content {
         width: 50%;
-        padding: 8rem 8rem 9rem;
+        padding: 8rem;
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            padding: 1rem 6rem;
+            height: 100%;
+        }
+
+        @media (max-width: 900px) {
+            padding: 1rem 6rem;
+            height: 100%;
+        }
     }
 
     &__title {
@@ -31,9 +70,70 @@
         @media (min-width: 1600px) {
             font-size: 4rem;
         }
+
+        @media (max-width: 900px) {
+            display: none;
+        }
+
+        @media (max-height: 450px) {
+            display: none;
+        }
     }
 
     &__button {
         margin-top: 5rem;
+    }
+
+    &__error {
+        color: red;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    height: 5rem;
+    width: 5rem;
+    border: none;
+    cursor: pointer;
+    z-index: 50;
+
+    span {
+        display: block;
+        width: 3rem;
+        height: 2px;
+        background-color: '#000000';
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 3rem;
+            height: 2px;
+            left: 0;
+            background-color: #000000;
+        }
+
+        &::before {
+            transform: rotate(135deg);
+            top: -0;
+        }
+
+        &::after {
+            transform: rotate(-135deg);
+            top: 0;
+        }
+    }
+
+    @media (min-width: 768px) {
+        right: 1rem;
     }
 }

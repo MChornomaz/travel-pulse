@@ -3,8 +3,21 @@
     align-items: center;
     justify-content: space-between;
 
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
+
     &__image-block {
         width: 35%;
+
+        @media (max-width: 900px) {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 4rem;
+            overflow: hidden;
+        }
     }
 
     &__image-container {
@@ -23,12 +36,20 @@
         cursor: pointer;
     }
 
+    &__image-photo {
+        width: 100%;
+    }
+
     &__file {
         display: none;
     }
 
     &__data {
         width: 60%;
+
+        @media (max-width: 756px) {
+            width: 90%;
+        }
     }
 
     &__terms-block {
@@ -36,7 +57,6 @@
         margin-bottom: 4rem;
         display: flex;
         align-items: start;
-
     }
 
     &__terms {
@@ -49,7 +69,6 @@
 .styled-checkbox {
     position: absolute;
     opacity: 0;
-
 
     &+label {
         position: relative;
@@ -101,4 +120,9 @@
             4px -8px 0 white;
         transform: rotate(45deg);
     }
+}
+
+.error {
+    color: red;
+    font-size: 1.5rem;
 }

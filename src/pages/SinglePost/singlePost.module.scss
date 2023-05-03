@@ -20,15 +20,22 @@
     }
 
 
-
-
-
     &__header {
         font-weight: 800;
-        font-size: 17vw;
+        font-size: 10vw;
         letter-spacing: 1.5vw;
         position: relative;
         z-index: 4;
+
+        @media (max-width: 900px) {
+            font-size: 10vw;
+            margin-left: 5%;
+        }
+
+        @media (max-height: 550px) {
+            margin-top: 5rem;
+            font-size: 20vh;
+        }
     }
 }
 
@@ -39,7 +46,6 @@
         -webkit-text-stroke: 1px #fff;
     }
 }
-
 
 .post {
     padding-top: 8rem;
@@ -55,6 +61,10 @@
         line-height: 9rem;
         color: #4169E1;
         margin-bottom: 3rem;
+
+        @media (max-width: 900px) {
+            font-size: 7rem;
+        }
     }
 
     &__location {

@@ -1,14 +1,29 @@
 .slider {
     margin-bottom: 14rem;
 
+    @media (max-width: 1024px) {
+        margin-bottom: 8rem;
+    }
+
 
     &__description {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 8rem;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            margin-bottom: 4rem;
+        }
     }
 
+    &__text {
+
+        @media (max-width: 768px) {
+            margin-bottom: 3rem;
+        }
+    }
 
     &__title {
         font-weight: 700;
@@ -28,6 +43,10 @@
         align-items: center;
         justify-content: space-between;
         width: 12.5rem;
+
+        @media (max-width: 768px) {
+            align-self: flex-end;
+        }
     }
 
     &__overlay {
@@ -37,17 +56,29 @@
 
     &__container {
         display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        transition: transform .3s;
     }
 
     &__card {
         display: flex;
         flex-direction: column;
-        margin-right: 2rem;
         max-width: 49rem;
         text-decoration: none;
         color: #000000;
+        width: 100%;
+        flex-shrink: 0;
+        padding: 0 16px;
+        box-sizing: border-box;
 
+        @media only screen and (min-width: 768px) {
+            width: 50%;
+        }
 
+        @media only screen and (min-width: 1024px) {
+            width: 33.333%;
+        }
 
         &:last-of-type {
             margin-right: 0;
@@ -58,7 +89,6 @@
         width: 100%;
         border-radius: 3rem;
         overflow: hidden;
-
 
         & img {
             width: 100%;
@@ -80,7 +110,7 @@
 
     &__place {
         font-weight: 700;
-        font-size: 3 rem;
+        font-size: 3rem;
         line-height: 3.5rem;
     }
 }

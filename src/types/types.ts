@@ -11,7 +11,6 @@ export type MainScreenCardProps = {
     cardInfo: SingleCard;
 };
 export type MainScreenProps = {
-    cards: SingleCard[];
     heading: string;
 };
 
@@ -25,25 +24,24 @@ export type FeaturedBlockProps = {
     media: MediaItem[];
 };
 
-export type PlaceInfo = {
+export type DestinationInfo = {
     id: string;
     imageUrl: string;
     location: string;
-    name: string;
+    place: string;
+    country: string;
 };
 
 export type PlaceSliderProps = {
-    sliderInfo: {
-        title: string;
-        subtitle: string;
-        places: PlaceInfo[];
-    };
+    title: string;
+    subtitle: string;
+    destinations: DestinationInfo[];
 };
 
 export type TownShort = {
     id: string;
     imageUrl: string;
-    name: string;
+    place: string;
 };
 
 export type InfoBlockProps = {
@@ -51,8 +49,8 @@ export type InfoBlockProps = {
         title: string;
         subtitle: string;
         buttonText: string;
-        towns: TownShort[];
     };
+    towns: Place[];
 };
 
 export type StoryShort = {
@@ -63,15 +61,18 @@ export type StoryShort = {
     timeToRead: number;
     heading: string;
     description: string;
+    region: string;
+    country: string;
+    place: string;
 };
 
 export type StoryBlockProps = {
     data: {
-        title: string;
         subtitle: string;
         buttonText: string;
-        stories: StoryShort[];
     };
+    title: string;
+    stories: StoryShort[];
     numberOfPosts: number;
 };
 
@@ -102,6 +103,7 @@ export type FormInputProps = {
     label: string;
     value: string;
     onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+    onBLur?: () => void;
     placeholder?: string;
     testId?: string;
 };
@@ -115,6 +117,7 @@ export type FormTextAreaProps = {
     children: string;
     value: string;
     testId?: string;
+    onBlur?: () => void;
 };
 
 export type ButtonLightProps = {
@@ -132,6 +135,7 @@ export type FormButtonProps = {
     testid?: string;
     inverted?: boolean;
     wide?: boolean;
+    disabled?: boolean;
 };
 
 export type SinglePostData = {
@@ -140,6 +144,14 @@ export type SinglePostData = {
     location: string;
     imageUrl: string;
     description: string;
+    region: string;
+    country: string;
+};
+
+export type PlaceShort = {
+    id: string;
+    imageUrl: string;
+    place: string;
 };
 
 export type BlockWithFiltersProps = {
@@ -147,7 +159,7 @@ export type BlockWithFiltersProps = {
         placeholder: string;
         items: SelectItem[];
     };
-    cardsInfo: MediaItem[];
+    cardsInfo: PlaceShort[];
     url: string;
     buttonText: string;
     title: string;
@@ -155,5 +167,81 @@ export type BlockWithFiltersProps = {
 
 export type PlaceCardProps = {
     url: string;
-    placeInfo: MediaItem;
+    placeInfo: PlaceShort;
+};
+
+export type SingleInfoItem = {
+    id: string;
+    place: string;
+    location: string;
+    imageUrl: string;
+    description: string;
+    heading: string;
+    region: string;
+    country: string;
+};
+
+export type Destination = {
+    id: string;
+    imageUrl: string;
+    location: string;
+    place: string;
+    description: string;
+    region: string;
+    country: string;
+};
+
+export type Place = {
+    id: string;
+    imageUrl: string;
+    place: string;
+    location: string;
+    description: string;
+    region: string;
+    country: string;
+};
+
+export type Review = {
+    id: string;
+    imageUrl: string;
+    location: string;
+    heading: string;
+    description: string;
+    rate: number;
+    region: string;
+    country: string;
+};
+
+export type User = {
+    isAuth: boolean;
+    userName: string | null;
+    role: string | null;
+    token: string | null;
+    userIsLoading: boolean;
+    userHasError: null | string;
+};
+
+export type NewUser = {
+    name: string;
+    email: string;
+    password: string;
+};
+
+export type UserLogin = {
+    email: string;
+    password: string;
+};
+
+export type UserExisting = {
+    userName: string | null;
+    role: string | null;
+    token: string | null;
+};
+
+export type StylingState = {
+    headerInverted: boolean;
+};
+
+export type ModalCloseProps = {
+    onClose: () => void;
 };

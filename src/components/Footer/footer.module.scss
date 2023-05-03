@@ -6,6 +6,14 @@
     height: 30rem;
     background-color: #4169E1;
 
+    @media (max-width: 900px) {
+        height: 15rem;
+    }
+
+    @media (max-height: 550px) {
+        height: 15rem;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -16,15 +24,21 @@
     &__logo {
         width: 14rem;
         margin-bottom: 3rem;
+
+        @media (max-width: 900px) {
+            width: 6rem;
+        }
+
+
+        @media (max-height: 550px) {
+            height: 6rem;
+        }
     }
 
     &__copy {
         font-weight: 600;
         font-size: 2rem;
         line-height: 29px;
-        /* identical to box height */
-
-
         color: #FFFFFF;
     }
 }

@@ -1,0 +1,9 @@
+.results {
+    min-height: calc(100vh - 30rem);
+    padding-top: 25rem;
+    padding-bottom: 20rem;
+
+    @media (max-width: 768px) {
+        padding-top: 12rem;
+    }
+}

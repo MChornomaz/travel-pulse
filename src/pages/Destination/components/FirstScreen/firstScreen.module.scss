@@ -3,7 +3,7 @@
     min-height: 900px;
     max-height: 90vh;
     background-size: cover;
-    background-position: center;
+    background-position: 35% 50%;
     position: relative;
     display: flex;
     align-items: center;
@@ -32,4 +32,10 @@
     position: relative;
 
     color: #FFFFFF;
+
+
+
+    @media (max-width: 768px) {
+        font-size: 8.5vw;
+    }
 }

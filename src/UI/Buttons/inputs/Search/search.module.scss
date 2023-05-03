@@ -16,6 +16,10 @@
     outline: none;
     z-index: 1;
 
+    @media (max-width: 500px) {
+        padding: 13px 50px 13px 10px;
+    }
+
     &::placeholder {
         font-size: 2rem;
         color: #AAAAAA;
@@ -25,10 +29,7 @@
     &:active {
         border: 2px solid rgb(48, 48, 245);
     }
-
-
 }
-
 
 .label {
     position: absolute;

@@ -4,7 +4,16 @@
     background-size: cover;
     position: relative;
     transition: all .5s;
+    background-position: 50% 50%;
 
+    @media (max-width: 1024px) {
+        width: 50%;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        height: 100vh;
+    }
 
     &:hover {
         background-position: center;
@@ -50,8 +59,17 @@
         text-decoration: none;
         color: #FFFFFF;
 
+        @media (max-width: 1024px) {
+            font-size: 2vw;
+            line-height: 2.5vw;
+            align-items: center;
+        }
 
-
+        @media (max-width: 768px) {
+            font-size: 2.1vw;
+            line-height: 2.5vw;
+            align-items: center;
+        }
 
         & h3 {
             width: 75%;
@@ -61,7 +79,5 @@
             -webkit-text-decoration-color: transparent;
             -moz-text-decoration-color: transparent;
         }
-
-
     }
 }
