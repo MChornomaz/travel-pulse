@@ -1,3 +1,18 @@
+Project Description:
+
+The project is a web application built using React and TypeScript that serves as a platform to showcase various travel destinations around the world. The application allows users to browse and read about different amazing places on the planet, even if they don't plan to travel. Technologies and libraries used include React, Redux toolkit, redux thunk, SCSS, Formik, Styled Components, React modules, React Router Dom v6, and yup. It is worth noting that, since this project is intended to demonstrate knowledge of various technologies, the entire project did not follow a single style. A few forms were validated using Formik, one using a custom hook, and some components were styled using React modules, while others were styled with Styled Components. Also, not all solutions are optimal due to the limited functionality of the backend, which only provides basic functionality. The project focused mainly on the client-side, but this will be addressed in future iterations of the project.
+
+It is important to note that no styling libraries were used in this project. The application is adapted for desktops, tablets, and mobile devices. The project's functionality includes post search, filtering, as well as separate editing and deleting of reviews.
+
+One issue currently present in the registration process is that if there is a period (".") in the part of the email address before the "@" symbol, the database will not record it, and the user will have to provide the email without it while logging in.
+
+Deployment:
+
+The deployed project can be found at https://travel-puls.web.app/
+
+Please note that the project is still a work in progress, and there may be issues present that have yet to be resolved.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
